@@ -11,10 +11,12 @@ package DTO;
 public class HabitacionesDTO {
     private int id;
     private String habitacion;
+    private int tipo_habitacion;
     
-    public HabitacionesDTO(int id, String habitacion){
+    public HabitacionesDTO(int id, String habitacion, int tipo_habitacion){
         this.id = id;
         this.habitacion = habitacion;
+        this.tipo_habitacion = tipo_habitacion;
     }
     
     public int getId() { 
@@ -29,5 +31,12 @@ public class HabitacionesDTO {
     }
     public void setHabitacion(String habitacion) { 
         this.habitacion = habitacion; 
+    }
+    
+    public int getTipoHabitacion() { 
+        return tipo_habitacion; 
+    }
+    public void setTipoHabitacion(int tipo_habitacion) { 
+        this.tipo_habitacion = tipo_habitacion; 
     }
 }
