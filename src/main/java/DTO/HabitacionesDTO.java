@@ -12,11 +12,17 @@ public class HabitacionesDTO {
     private int id;
     private String habitacion;
     private int tipo_habitacion;
+    private String tipo;
+    private int capacidad;
+    private String descripcion;
     
-    public HabitacionesDTO(int id, String habitacion, int tipo_habitacion){
+    public HabitacionesDTO(int id, String habitacion, int tipo_habitacion, String tipo, int capacidad, String descripcion){
         this.id = id;
         this.habitacion = habitacion;
         this.tipo_habitacion = tipo_habitacion;
+        this.tipo = tipo;
+        this.capacidad = capacidad;
+        this.descripcion = descripcion;
     }
     
     public int getId() { 
@@ -38,5 +44,29 @@ public class HabitacionesDTO {
     }
     public void setTipoHabitacion(int tipo_habitacion) { 
         this.tipo_habitacion = tipo_habitacion; 
+    }
+    
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public int getCapacidad() {
+        return capacidad;
+    }
+
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 }
