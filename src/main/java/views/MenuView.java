@@ -25,6 +25,7 @@ public class MenuView extends javax.swing.JFrame {
         jBtnHuespedes = new javax.swing.JButton();
         jBtnReservas = new javax.swing.JButton();
         jBtnSalir = new javax.swing.JButton();
+        jBtnHabitaciones = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,6 +52,13 @@ public class MenuView extends javax.swing.JFrame {
             }
         });
 
+        jBtnHabitaciones.setText("Habitaciones");
+        jBtnHabitaciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnHabitacionesActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -65,8 +73,9 @@ public class MenuView extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jBtnHuespedes, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
                             .addComponent(jBtnReservas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jBtnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(114, Short.MAX_VALUE))
+                            .addComponent(jBtnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBtnHabitaciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -75,11 +84,13 @@ public class MenuView extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(jBtnHuespedes)
-                .addGap(37, 37, 37)
+                .addGap(38, 38, 38)
+                .addComponent(jBtnHabitaciones)
+                .addGap(32, 32, 32)
                 .addComponent(jBtnReservas)
-                .addGap(34, 34, 34)
+                .addGap(33, 33, 33)
                 .addComponent(jBtnSalir)
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pack();
@@ -100,6 +111,12 @@ public class MenuView extends javax.swing.JFrame {
     private void jBtnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSalirActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jBtnSalirActionPerformed
+
+    private void jBtnHabitacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnHabitacionesActionPerformed
+        this.dispose();
+        HabitacionesView habitaciones = new HabitacionesView();
+        habitaciones.setVisible(true);
+    }//GEN-LAST:event_jBtnHabitacionesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -137,6 +154,7 @@ public class MenuView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBtnHabitaciones;
     private javax.swing.JButton jBtnHuespedes;
     private javax.swing.JButton jBtnReservas;
     private javax.swing.JButton jBtnSalir;
