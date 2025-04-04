@@ -45,21 +45,21 @@ public class HabitacionesDAO {
     }
     
     public boolean agregarHabitacion(HabitacionesDTO habitacion) {
-    String sql = "INSERT INTO habitaciones (numero_habitacion, tipo_habitacion_id, activo) VALUES (?, ?, 1)";
+        String sql = "INSERT INTO habitaciones (numero_habitacion, tipo_habitacion_id, activo) VALUES (?, ?, 1)";
 
-    try (Connection conn = ConnectionDB.getConnection();
-         PreparedStatement stmt = conn.prepareStatement(sql)) {
+        try (Connection conn = ConnectionDB.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-        stmt.setString(1, habitacion.getHabitacion());
-        stmt.setInt(2, habitacion.getTipoHabitacion());
+            stmt.setString(1, habitacion.getHabitacion());
+            stmt.setInt(2, habitacion.getTipoHabitacion());
 
-        int rowsAffected = stmt.executeUpdate();
-        return rowsAffected > 0;
-    } catch (SQLException ex) {
-        System.out.println("Error al agregar habitación: " + ex.toString());
+            int filasAfectadas = stmt.executeUpdate();
+            return filasAfectadas > 0;
+        } catch (SQLException ex) {
+            System.out.println("Error al agregar habitación: " + ex.toString());
+        }
+        return false;
     }
-    return false;
-}
 
     
     public boolean actualizarHabitacion(HabitacionesDTO habitacion) {
